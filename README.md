@@ -142,6 +142,18 @@ The project includes:
 
 These visualizations help interpret model behavior and validate assumptions.
 
+### 📊 Analysis Results
+
+![Figure 1](results/Figure_1.png)
+![Figure 2](results/Figure_2.png)
+![Figure 3](results/Figure_3.png)
+![Figure 4](results/Figure_4.png)
+![Figure 5](results/Figure_5.png)
+![Figure 6](results/Figure_6.png)
+![Figure 7](results/Figure_7.png)
+![Figure 8](results/Figure_8.png)
+![Figure 9](results/Figure_9.png)
+
 ---
 
 ## Testing
