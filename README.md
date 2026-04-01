@@ -43,7 +43,7 @@ Core machine learning logic is separated from the user interface.
 ---
 
 ## Project Structure
-
+```
 student-performance-regression/
 │
 ├── data/
@@ -71,7 +71,7 @@ student-performance-regression/
 ├── main.py
 ├── requirements.txt
 └── README.md
-
+```
 ---
 
 ## Installation and Setup
