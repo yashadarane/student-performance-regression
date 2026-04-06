@@ -1,6 +1,6 @@
 import unittest
 import pandas as pd
-from src.model import train_model, predict
+from src.model import PerformancePredictor
 
 
 class TestModel(unittest.TestCase):
@@ -10,20 +10,26 @@ class TestModel(unittest.TestCase):
             "Hours Studied": [1, 2, 3],
             "Previous Scores": [50, 60, 70],
             "Sleep Hours": [6, 7, 8],
-            "Practice Papers Solved": [1, 2, 3],
+            "Sample Question Papers Practiced": [1, 2, 3],
             "Extracurricular Activities": [1, 0, 1]
         })
 
         self.y = pd.Series([55, 65, 75])
 
+        self.model = PerformancePredictor()
+
     def test_training(self):
-        model = train_model(self.X, self.y)
-        self.assertIsNotNone(model)
+        trained_model = self.model.train(self.X, self.y)
+        self.assertIsNotNone(trained_model)
 
     def test_prediction(self):
-        model = train_model(self.X, self.y)
-        preds = predict(model, self.X)
+        self.model.train(self.X, self.y)
+        preds = self.model.predict(self.X)
+
         self.assertEqual(len(preds), len(self.X))
+
+        # Ensure predictions are numeric
+        self.assertTrue(all(isinstance(p, (int, float)) for p in preds))
 
 
 if __name__ == "__main__":

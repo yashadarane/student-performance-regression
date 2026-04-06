@@ -6,7 +6,7 @@ from src.data_loader import load_data
 class TestDataLoader(unittest.TestCase):
 
     def test_load_valid_file(self):
-        df = load_data("data/student_data.csv")
+        df = load_data("Student_Performance.csv")
         self.assertIsInstance(df, pd.DataFrame)
 
     def test_invalid_path(self):
